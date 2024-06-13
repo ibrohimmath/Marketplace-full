@@ -1,5 +1,3 @@
-import React from "react";
+import CardHighlighted from "./type/CardHighlighted";
 
-export default function Card() {
-  return <div>Card</div>;
-}
+export { CardHighlighted };
