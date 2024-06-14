@@ -14,7 +14,7 @@ export default function CardHighlighted({
   style,
 }) {
   return (
-    <div className={clsx(cn["card"], cn["card-simple"])} style={style}>
+    <div className={clsx(cn["card"], cn["card-highlighted"])} style={style}>
       <ImgBox>
         <ImgFull src={mainImage} style={{ height: "28rem" }} />
       </ImgBox>
