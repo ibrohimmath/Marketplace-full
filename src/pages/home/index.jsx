@@ -8,6 +8,7 @@ import Creators from "../../components/Creators";
 import Category from "../../components/Category";
 import Nft from "../../components/Nft";
 import Mushroom from "../../components/Mushroom";
+import Works from "../../components/Works";
 
 import cn from "./style.module.scss";
 
@@ -22,6 +23,9 @@ function Home() {
         <Nft />
       </Container>
       <Mushroom />
+      <Container>
+        <Works />
+      </Container>
     </div>
   );
 }
