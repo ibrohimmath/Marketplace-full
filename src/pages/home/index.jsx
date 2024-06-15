@@ -9,6 +9,7 @@ import Category from "../../components/Category";
 import Nft from "../../components/Nft";
 import Mushroom from "../../components/Mushroom";
 import Works from "../../components/Works";
+import Digest from "../../components/Digest";
 
 import cn from "./style.module.scss";
 
@@ -25,6 +26,7 @@ function Home() {
       <Mushroom />
       <Container>
         <Works />
+        <Digest />
       </Container>
     </div>
   );
