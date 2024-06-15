@@ -24,6 +24,8 @@ export default function Content({
   avatar,
   avatarName,
   salesInfo,
+  price,
+  bid,
   style,
 }) {
   const [width, setWidth] = useState(window.innerWidth);
@@ -122,6 +124,36 @@ export default function Content({
             {salesInfo}
           </Base>
         </p>
+      )}
+
+      {price && bid && (
+        <>
+          <div className={clsx(cn["nft-flex"])}>
+            <Caption
+              fontFamily={FontFamily.primary}
+              style={{ color: "#858584" }}
+            >
+              Price
+            </Caption>
+            <Caption
+              fontFamily={FontFamily.primary}
+              style={{ color: "#858584" }}
+            >
+              Highest Bid
+            </Caption>
+          </div>
+          <div
+            className={clsx(cn["nft-flex"])}
+            style={{ marginTop: "0.2rem !important" }}
+          >
+            <Base boldness={Boldness.normal} fontFamily={FontFamily.primary}>
+              {price}
+            </Base>
+            <Base boldness={Boldness.normal} fontFamily={FontFamily.primary}>
+              {bid}
+            </Base>
+          </div>
+        </>
       )}
     </div>
   );
