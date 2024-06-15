@@ -8,6 +8,18 @@
   }
 }
 
+%white {
+  background-color: white;
+  color: black;
+  transition: 0.4s;
+  &:hover {
+    background: var(--main-color);
+    color: white;
+    border: none;
+    outline: 2px solid gray;
+  }
+}
+
 button {
   background: var(--main-color);
   border-radius: 12px;
@@ -43,5 +55,17 @@ button {
   &--dark-tertiary {
     padding: 0.4rem 1.4rem;
     @extend %dark;
+  }
+  &--white-primary {
+    padding: 0.8rem 1.8rem;
+    @extend %white;
+  }
+  &--white-secondary {
+    padding: 0.6rem 1.6rem;
+    @extend %white;
+  }
+  &--white-tertiary {
+    padding: 0.4rem 1.4rem;
+    @extend %white;
   }
 }

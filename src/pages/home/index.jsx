@@ -7,6 +7,7 @@ import Trending from "../../components/Trending";
 import Creators from "../../components/Creators";
 import Category from "../../components/Category";
 import Nft from "../../components/Nft";
+import Mushroom from "../../components/Mushroom";
 
 import cn from "./style.module.scss";
 
@@ -20,6 +21,7 @@ function Home() {
         <Category />
         <Nft />
       </Container>
+      <Mushroom />
     </div>
   );
 }
