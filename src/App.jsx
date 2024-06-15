@@ -1,7 +1,9 @@
 import React from "react";
+
 import Layout from "./components/Layout";
 import Home from "./pages/home";
-// import { ImgAvatar, ImgFull, ImgSquare } from "./components/Img";
+import Category from "./components/Category";
+
 import showCaseSrc from "../src/assets/showcase.png";
 
 function App() {
