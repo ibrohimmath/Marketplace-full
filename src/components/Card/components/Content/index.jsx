@@ -15,12 +15,15 @@ import { ImgSquare, ImgAvatar } from "../../../Img";
 import cn from "./style.module.scss";
 
 export default function Content({
+  isSmall,
+  isArtist = false,
   firstImage,
   secondImage,
   dataNum,
   title,
   avatar,
   avatarName,
+  salesInfo,
   style,
 }) {
   const [width, setWidth] = useState(window.innerWidth);
@@ -40,7 +43,11 @@ export default function Content({
 
   return (
     <div
-      className={clsx(cn["content"], dataNum && cn["content-trending"])}
+      className={clsx(
+        cn["content"],
+        dataNum && cn["content-trending"],
+        isArtist && !isSmall && "center"
+      )}
       style={style}
     >
       {firstImage && secondImage && dataNum && (
@@ -61,7 +68,13 @@ export default function Content({
           boldness={Boldness.semibold}
           style={{
             marginTop: `${
-              width > 640 ? "2.5rem" : width <= 540 ? "5rem" : "8rem"
+              isArtist
+                ? "-0.6rem"
+                : width > 640
+                ? "2.5rem"
+                : width <= 540
+                ? "5rem"
+                : "8rem"
             }`,
           }}
         >
@@ -83,6 +96,34 @@ export default function Content({
             {avatarName}
           </Base>
         </div>
+      )}
+
+      {salesInfo && (
+        <p
+          style={{
+            marginTop: "0.8rem",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Base
+            fontFamily={FontFamily.secondary}
+            boldness={Boldness.normal}
+            style={{ color: "#858584" }}
+          >
+            Total Sales:
+          </Base>
+          &nbsp;
+          <Base
+            fontFamily={FontFamily.primary}
+            boldness={Boldness.semibold}
+            style={{ color: "white" }}
+          >
+            {salesInfo}
+          </Base>
+        </p>
       )}
     </div>
   );

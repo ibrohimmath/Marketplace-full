@@ -1,3 +1,13 @@
+%dark {
+  background-color: var(--site-background);
+  outline: 2px solid #a259ff;
+  transition: 0.4s;
+  &:hover {
+    background: var(--main-color);
+    border: none;
+  }
+}
+
 button {
   background: var(--main-color);
   border-radius: 12px;
@@ -21,5 +31,17 @@ button {
   }
   &--tertiary {
     padding: 0.4rem 1.4rem;
+  }
+  &--dark-primary {
+    padding: 0.8rem 1.8rem;
+    @extend %dark;
+  }
+  &--dark-secondary {
+    padding: 0.6rem 1.6rem;
+    @extend %dark;
+  }
+  &--dark-tertiary {
+    padding: 0.4rem 1.4rem;
+    @extend %dark;
   }
 }
