@@ -32,8 +32,6 @@ export default function Content({
     setWidth(window.innerWidth);
   };
 
-  console.log("Window width:", width);
-
   useEffect(() => {
     window.addEventListener("resize", handleWindowSize);
     return () => {

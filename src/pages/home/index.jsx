@@ -5,6 +5,7 @@ import Container from "../../components/Container";
 import Showcase from "../../components/Showcase";
 import Trending from "../../components/Trending";
 import Creators from "../../components/Creators";
+import Category from "../../components/Category";
 
 import cn from "./style.module.scss";
 
@@ -15,6 +16,7 @@ function Home() {
         <Showcase />
         <Trending />
         <Creators />
+        <Category />
       </Container>
     </div>
   );

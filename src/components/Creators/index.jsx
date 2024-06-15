@@ -73,6 +73,28 @@ export default function Creators() {
           &nbsp; View Rankings
         </Button>
       </div>
+
+      {/* <div className={clsx(cn["grid-creators"])}>
+        {datas.map((item, id) =>
+          width >= 840 ? (
+            <CardArtistBig
+              key={id}
+              order={id + 1}
+              creatorImage={item.image}
+              title={item.title}
+              salesInfo={"34.53 ETH"}
+            />
+          ) : (
+            <CardArtistSmall
+              key={id}
+              order={id + 1}
+              creatorImage={item.image}
+              title={item.title}
+              salesInfo={"34.53 ETH"}
+            />
+          )
+        )}
+      </div> */}
       <div className={clsx(cn["grid-creators"])}>
         {datas.map((item, id) =>
           width >= 840 ? (
